@@ -6,18 +6,23 @@ import json
 import numpy as np
 from tqdm import tqdm
 
-# Algorithm parameters
+# Reference files
 DATA_FILE = "TFTSet12_full_lookup.json"
-POPULATION_SIZE = 100
+
+# Algorithm parameters
+POPULATION_SIZE = 200
 ELITE_FRACTION = 0.15
 TOURNAMENT_SIZE = 5
-CHROMOSOME_LENGTH = 60
-NUM_ONES = 8  # Number of 1s for each individual (binary representation)
 MUTATION_RATE = 0.05
 GENERATIONS = 1000
-EXPORT_TOP_N = 100
+
+NUM_ONES = 9  # Number of 1s for each individual (binary representation)
+CHROMOSOME_LENGTH = 60
 
 ELITE_SIZE = int(POPULATION_SIZE * ELITE_FRACTION)
+
+# Export parameters
+EXPORT_TOP_N = 100
 
 def load_data(file):
     """Loads data from the data file"""
@@ -189,6 +194,9 @@ def generate_compositions(traits, traits_matrix):
             sorted_indices = np.argsort(fitness_values)[::-1]
             population = population[sorted_indices]
             fitness_values = fitness_values[sorted_indices]
+
+            # Updating max fitness
+            pbar.set_postfix({"Max Fitness": fitness_values[0]})
 
             # If we have reached the last generation
             if generation == GENERATIONS - 1:
