@@ -7,7 +7,7 @@ import numpy as np
 from tqdm import tqdm
 
 # Reference files
-DATA_FILE = "TFTSet12_full_lookup.json"
+DATA_FILE = "TFTSet17_full_lookup.json"
 
 # Algorithm parameters
 POPULATION_SIZE = 200
@@ -17,7 +17,7 @@ MUTATION_RATE = 0.05
 GENERATIONS = 1000
 
 NUM_ONES = 9  # Number of 1s for each individual (binary representation)
-CHROMOSOME_LENGTH = 60
+CHROMOSOME_LENGTH = 63
 
 ELITE_SIZE = int(POPULATION_SIZE * ELITE_FRACTION)
 
@@ -31,13 +31,64 @@ def load_data(file):
     return data
 
 def process_traits(traits_data):
-    """Processes the traits data to extract and transform relevant data"""
-    traits = []
+    """Processes traits data and groups multiple versions of the same trait"""
+    grouped_traits = {}
+
     for trait in traits_data:
+        api_name = trait["apiName"]
         units = [x["unit"] for x in trait["units"]]
-        thresholds = [x["minUnits"] for x in trait["effects"]]
-        traits.append({ "apiName": trait["apiName"], "units": units, "thresholds": thresholds })
-    return traits
+
+        if api_name not in grouped_traits:
+            grouped_traits[api_name] = {
+                "apiName": api_name,
+                "units": units,
+                "variants": []
+            }
+        else:
+            # Safety net: if the units are different we merge without duplicates
+            grouped_traits[api_name]["units"] = list(
+                set(grouped_traits[api_name]["units"] + units)
+            )
+
+        # Case 1: trait without variants
+        if "effects" in trait:
+            grouped_traits[api_name]["variants"].append({
+                "effects": trait["effects"]
+            })
+
+        # Case 2: trait with variants
+        elif "variants" in trait:
+            for variant in trait["variants"]:
+                grouped_traits[api_name]["variants"].append({
+                    "effects": variant["effects"]
+                })
+
+        else:
+            raise ValueError(f"Trait '{api_name}' has neither 'effects' nor 'variants'")
+
+        processed_traits = []
+
+        for trait in grouped_traits.values():
+            # Standard case: one version
+            if len(trait["variants"]) == 1:
+                effects = trait["variants"][0]["effects"]
+                thresholds = [x["minUnits"] for x in effects]
+
+                processed_traits.append({
+                    "apiName": trait["apiName"],
+                    "units": trait["units"],
+                    "thresholds": thresholds,
+                    "effects": effects
+                })
+            else:
+                # Case with variants
+                processed_traits.append({
+                    "apiName": trait["apiName"],
+                    "units": trait["units"],
+                    "variants": trait["variants"]
+                })
+
+    return processed_traits
 
 def create_traits_matrix(traits, units):
     """Creates the traits matrix from the traits data and units"""
@@ -76,10 +127,33 @@ def compute_fitness(individual, traits_matrix, traits):
     """Computes the fitness of an individual/solution"""
     active_traits = compute_active_traits(individual, traits_matrix)
     fitness_value = 0
+
     for i, count in enumerate(active_traits):
-        for threshold in traits[i]["thresholds"]:
-            if count >= threshold:
-                fitness_value += threshold
+        trait = traits[i]
+
+        # Normal case: trait without variants
+        if "thresholds" in trait:
+            for threshold in trait["thresholds"]:
+                if count >= threshold:
+                    fitness_value += threshold
+
+        # Case with variants: we only take the one that gives the best score
+        elif "variants" in trait:
+            best_variant_score = 0
+
+            for variant in trait["variants"]:
+                variant_score = 0
+                thresholds = [effect["minUnits"] for effect in variant["effects"]]
+
+                for threshold in thresholds:
+                    if count >= threshold:
+                        variant_score += threshold
+
+                if variant_score > best_variant_score:
+                    best_variant_score = variant_score
+
+            fitness_value += best_variant_score
+
     return fitness_value
 
 def tournament_selection(population, fitness_values, num_selected):
