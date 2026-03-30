@@ -1,0 +1,1213 @@
+{
+  "traits": [
+    {
+      "apiName": "Anima",
+      "units": [
+        { "unit": "Briar" },
+        { "unit": "Jinx" },
+        { "unit": "Aurora" },
+        { "unit": "Illaoi" },
+        { "unit": "Fiora" }
+      ],
+      "effects": [
+        { "minUnits": 3 },
+        { "minUnits": 6 }
+      ]
+    },
+    {
+      "apiName": "Arbiter",
+      "units": [
+        { "unit": "Leona" },
+        { "unit": "Zoe" },
+        { "unit": "Diana" },
+        { "unit": "LeBlanc" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 }
+      ]
+    },
+    {
+      "apiName": "Bulwark",
+      "units": [
+        { "unit": "Shen" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Commander",
+      "units": [
+        { "unit": "Sona" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Dark Lady",
+      "units": [
+        { "unit": "Morgana" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Dark Star",
+      "units": [
+        { "unit": "Cho'Gath" },
+        { "unit": "Lissandra" },
+        { "unit": "Mordekaiser" },
+        { "unit": "Kai'Sa" },
+        { "unit": "Karma" },
+        { "unit": "Jhin" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 },
+        { "minUnits": 6 },
+        { "minUnits": 9 }
+      ]
+    },
+    {
+      "apiName": "Divine Duelist",
+      "units": [
+        { "unit": "Fiora" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Doomer",
+      "units": [
+        { "unit": "Vex" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Eradicator",
+      "units": [
+        { "unit": "Jhin" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Factory New",
+      "units": [
+        { "unit": "Graves" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Galaxy Hunter",
+      "units": [
+        { "unit": "Zed" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Gun Goddess",
+      "units": [
+        { "unit": "Miss Fortune" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Mecha",
+      "units": [
+        { "unit": "Urgot" },
+        { "unit": "Aurelion'Sol" },
+        { "unit": "The Mighty Mech" }
+      ],
+      "effects": [
+        { "minUnits": 3 },
+        { "minUnits": 4 },
+        { "minUnits": 6 }
+      ]
+    },
+    {
+      "apiName": "Meeple",
+      "units": [
+        { "unit": "Poppy" },
+        { "unit": "Veigar" },
+        { "unit": "Gnar" },
+        { "unit": "Meepsie" },
+        { "unit": "Fizz" },
+        { "unit": "Corki" },
+        { "unit": "Rammus" },
+        { "unit": "Bard" }
+      ],
+      "effects": [
+        { "minUnits": 3 },
+        { "minUnits": 5 },
+        { "minUnits": 7 },
+        { "minUnits": 10 }
+      ]
+    },
+    {
+      "apiName": "N.O.V.A.",
+      "units": [
+        { "unit": "Aatrox" },
+        { "unit": "Caitlyn" },
+        { "unit": "Akali" },
+        { "unit": "Maokai" },
+        { "unit": "Kindred" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 5 }
+      ]
+    },
+    {
+      "apiName": "Party Animal",
+      "units": [
+        { "unit": "Blitzcrank" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Primordian",
+      "units": [
+        { "unit": "Briar" },
+        { "unit": "Rek'Sai" },
+        { "unit": "Bel'Veth" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 }
+      ]
+    },
+    {
+      "apiName": "Oracle",
+      "units": [
+        { "unit": "Tahm Kench" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Psionic",
+      "units": [
+        { "unit": "Gragas" },
+        { "unit": "Pyke" },
+        { "unit": "Viktor" },
+        { "unit": "Master Yi" },
+        { "unit": "Sona" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 }
+      ]
+    },
+    {
+      "apiName": "Redeemer",
+      "units": [
+        { "unit": "Rhaast" }
+      ],
+      "effects": [
+        { "minUnits": 1 }
+      ]
+    },
+    {
+      "apiName": "Space Groove",
+      "units": [
+        { "unit": "Nasus" },
+        { "unit": "Teemo" },
+        { "unit": "Gwen" },
+        { "unit": "Ornn" },
+        { "unit": "Samira" },
+        { "unit": "Nami" },
+        { "unit": "Blitzcrank" }
+      ],
+      "effects": [
+        { "minUnits": 3 },
+        { "minUnits": 5 },
+        { "minUnits": 7 },
+        { "minUnits": 10 }
+      ]
+    },
+    {
+      "apiName": "Stargazer",
+      "units": [
+        { "unit": "Talon" },
+        { "unit": "Twisted Fate" },
+        { "unit": "Jax" },
+        { "unit": "Lulu" },
+        { "unit": "Nunu" },
+        { "unit": "Xayah" }
+      ],
+      "variants": [
+        {
+          "effects": [
+            { "minUnits": 3 },
+            { "minUnits": 5 },
+            { "minUnits": 7 }
+          ]
+        },
+        {
+          "effects": [
+            { "minUnits": 3 },
+            { "minUnits": 5 },
+            { "minUnits": 7 }
+          ]
+        },
+        {
+          "effects": [
+            { "minUnits": 3 },
+            { "minUnits": 4 },
+            { "minUnits": 5 },
+            { "minUnits": 6 },
+            { "minUnits": 7 },
+            { "minUnits": 8 },
+            { "minUnits": 9 },
+            { "minUnits": 10 },
+            { "minUnits": 11 }
+          ]
+        },
+        {
+          "effects": [
+            { "minUnits": 3 }
+          ]
+        },
+        {
+          "effects": [
+            { "minUnits": 3 }
+          ]
+        },
+        {
+          "effects": [
+            { "minUnits": 3 },
+            { "minUnits": 5 }
+          ]
+        },
+        {
+          "effects": [
+            { "minUnits": 3 },
+            { "minUnits": 4 },
+            { "minUnits": 5 },
+            { "minUnits": 6 }
+          ]
+        }
+      ]
+    },
+    {
+      "apiName": "Timebreaker",
+      "units": [
+        { "unit": "Ezreal" },
+        { "unit": "Milio" },
+        { "unit": "Pantheon" },
+        { "unit": "Riven" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 },
+        { "minUnits": 4 }
+      ]
+    },
+    {
+      "apiName": "Bastion",
+      "units": [
+        { "unit": "Aatrox" },
+        { "unit": "Poppy" },
+        { "unit": "Jax" },
+        { "unit": "Ornn" },
+        { "unit": "Rammus" },
+        { "unit": "Shen" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 },
+        { "minUnits": 6 }
+      ]
+    },
+    {
+      "apiName": "Brawler",
+      "units": [
+        { "unit": "Cho'Gath" },
+        { "unit": "Rek'Sai" },
+        { "unit": "Gragas" },
+        { "unit": "Pantheon" },
+        { "unit": "Maokai" },
+        { "unit": "Urgot" },
+        { "unit": "Tahm Kench" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 },
+        { "minUnits": 6 }
+      ]
+    },
+    {
+      "apiName": "Challenger",
+      "units": [
+        { "unit": "Bel'Veth" },
+        { "unit": "Jinx" },
+        { "unit": "Diana" },
+        { "unit": "Kindred" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 },
+        { "minUnits": 4 },
+        { "minUnits": 5 }
+      ]
+    },
+    {
+      "apiName": "Channeler",
+      "units": [
+        { "unit": "Mordekaiser" },
+        { "unit": "Zoe" },
+        { "unit": "Viktor" },
+        { "unit": "Aurelion'Sol" },
+        { "unit": "Bard" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 },
+        { "minUnits": 4 },
+        { "minUnits": 5 }
+      ]
+    },
+    {
+      "apiName": "Fateweaver",
+      "units": [
+        { "unit": "Caitlyn" },
+        { "unit": "Twisted Fate" },
+        { "unit": "Milio" },
+        { "unit": "Corki" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 }
+      ]
+    },
+    {
+      "apiName": "Marauder",
+      "units": [
+        { "unit": "Akali" },
+        { "unit": "Bel'Veth" },
+        { "unit": "Urgot" },
+        { "unit": "Master Yi" },
+        { "unit": "Fiora" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 },
+        { "minUnits": 6 }
+      ]
+    },
+    {
+      "apiName": "Replicator",
+      "units": [
+        { "unit": "Lissandra" },
+        { "unit": "Veigar" },
+        { "unit": "Pantheon" },
+        { "unit": "Lulu" },
+        { "unit": "Nami" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 }
+      ]
+    },
+    {
+      "apiName": "Rogue",
+      "units": [
+        { "unit": "Briar" },
+        { "unit": "Talon" },
+        { "unit": "Gwen" },
+        { "unit": "Fizz" },
+        { "unit": "Kai'Sa" },
+        { "unit": "Riven" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 },
+        { "minUnits": 4 },
+        { "minUnits": 5 }
+      ]
+    },
+    {
+      "apiName": "Shepherd",
+      "units": [
+        { "unit": "Lissandra" },
+        { "unit": "Teemo" },
+        { "unit": "Meepsie" },
+        { "unit": "Illaoi" },
+        { "unit": "LeBlanc" },
+        { "unit": "Sona" }
+      ],
+      "effects": [
+        { "minUnits": 3 },
+        { "minUnits": 5 },
+        { "minUnits": 7 }
+      ]
+    },
+    {
+      "apiName": "Sniper",
+      "units": [
+        { "unit": "Ezreal" },
+        { "unit": "Gnar" },
+        { "unit": "Samira" },
+        { "unit": "Xayah" },
+        { "unit": "Jhin" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 },
+        { "minUnits": 4 },
+        { "minUnits": 5 }
+      ]
+    },
+    {
+      "apiName": "Vanguard",
+      "units": [
+        { "unit": "Leona" },
+        { "unit": "Nasus" },
+        { "unit": "Mordekaiser" },
+        { "unit": "Illaoi" },
+        { "unit": "Nunu" },
+        { "unit": "Blitzcrank" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 4 },
+        { "minUnits": 6 }
+      ]
+    },
+    {
+      "apiName": "Voyager",
+      "units": [
+        { "unit": "Meepsie" },
+        { "unit": "Pyke" },
+        { "unit": "Aurora" },
+        { "unit": "The Mighty Mech" },
+        { "unit": "Karma" }
+      ],
+      "effects": [
+        { "minUnits": 2 },
+        { "minUnits": 3 },
+        { "minUnits": 4 },
+        { "minUnits": 5 },
+        { "minUnits": 6 }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "apiName": "Aatrox",
+      "cost": 1,
+      "role": "Attack Tank",
+      "range": 1,
+      "traits": [
+        "N.O.V.A.",
+        "Bastion"
+      ],
+      "tags": ["frontline", "secondary_tank", "weak"]
+    },
+    {
+      "apiName": "Briar",
+      "cost": 1,
+      "role": "Attack Fighter",
+      "range": 1,
+      "traits": [
+        "Anima",
+        "Primordian",
+        "Rogue"
+      ],
+      "tags": ["frontline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Caitlyn",
+      "cost": 1,
+      "role": "Attack Specialist",
+      "range": 4,
+      "traits": [
+        "N.O.V.A.",
+        "Fateweaver"
+      ],
+      "tags": ["backline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Cho'Gath",
+      "cost": 1,
+      "range": 1,
+      "role": "Magic Tank",
+      "traits": [
+        "Dark Star",
+        "Brawler"
+      ],
+      "tags": ["frontline", "secondary_tank", "weak"]
+    },
+    {
+      "apiName": "Ezreal",
+      "cost": 1,
+      "role": "Attack Caster",
+      "range": 4,
+      "traits": [
+        "Timebreaker",
+        "Sniper"
+      ],
+      "tags": ["backline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Leona",
+      "cost": 1,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Arbiter",
+        "Vanguard"
+      ],
+      "tags": ["frontline", "secondary_tank", "weak"]
+    },
+    {
+      "apiName": "Lissandra",
+      "cost": 1,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Dark Star",
+        "Shepherd",
+        "Replicator"
+      ],
+      "tags": ["backline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Nasus",
+      "cost": 1,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Space Groove",
+        "Vanguard"
+      ],
+      "tags": ["frontline", "secondary_tank", "weak"]
+    },
+    {
+      "apiName": "Poppy",
+      "cost": 1,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Meeple",
+        "Bastion"
+      ],
+      "tags": ["frontline", "secondary_tank", "weak"]
+    },
+    {
+      "apiName": "Rek'Sai",
+      "cost": 1,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Primordian",
+        "Brawler"
+      ],
+      "tags": ["frontline", "secondary_tank", "weak"]
+    },
+    {
+      "apiName": "Talon",
+      "cost": 1,
+      "role": "Attack Assassin",
+      "range": 1,
+      "traits": [
+        "Stargazer",
+        "Rogue"
+      ],
+      "tags": ["frontline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Teemo",
+      "cost": 1,
+      "role": "Magic Marksman",
+      "range": 4,
+      "traits": [
+        "Space Groove",
+        "Shepherd"
+      ],
+      "tags": ["backline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Twisted Fate",
+      "cost": 1,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Stargazer",
+        "Fateweaver"
+      ],
+      "tags": ["backline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Veigar",
+      "cost": 1,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Meeple",
+        "Replicator"
+      ],
+      "tags": ["backline", "secondary_carry", "weak"]
+    },
+    {
+      "apiName": "Akali",
+      "cost": 2,
+      "role": "Attack Fighter",
+      "range": 1,
+      "traits": [
+        "N.O.V.A.",
+        "Marauder"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Bel'Veth",
+      "cost": 2,
+      "role": "Attack Fighter",
+      "range": 2,
+      "traits": [
+        "Primordian",
+        "Challenger",
+        "Marauder"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Gnar",
+      "cost": 2,
+      "role": "Attack Specialist",
+      "range": 4,
+      "traits": [
+        "Meeple",
+        "Sniper"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Gragas",
+      "cost": 2,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Psionic",
+        "Brawler"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Gwen",
+      "cost": 2,
+      "role": "Magic Assassin",
+      "range": 2,
+      "traits": [
+        "Space Groove",
+        "Rogue"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Jax",
+      "cost": 2,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Stargazer",
+        "Bastion"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Jinx",
+      "cost": 2,
+      "role": "Attack Marksman",
+      "range": 4,
+      "traits": [
+        "Anima",
+        "Challenger"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Meepsie",
+      "cost": 2,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Meeple",
+        "Shepherd",
+        "Voyager"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Milio",
+      "cost": 2,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Timebreaker",
+        "Fateweaver"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Mordekaiser",
+      "cost": 2,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Dark Star",
+        "Channeler",
+        "Vanguard"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Pantheon",
+      "cost": 2,
+      "role": "Attack Tank",
+      "range": 1,
+      "traits": [
+        "Timebreaker",
+        "Brawler",
+        "Replicator"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Pyke",
+      "cost": 2,
+      "role": "Attack Assassin",
+      "range": 1,
+      "traits": [
+        "Psionic",
+        "Voyager"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Zoe",
+      "cost": 2,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Arbiter",
+        "Channeler"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Aurora",
+      "cost": 3,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Anima",
+        "Voyager"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Diana",
+      "cost": 3,
+      "role": "Magic Fighter",
+      "range": 1,
+      "traits": [
+        "Arbiter",
+        "Challenger"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Fizz",
+      "cost": 3,
+      "role": "Magic Assassin",
+      "range": 1,
+      "traits": [
+        "Meeple",
+        "Rogue"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Illaoi",
+      "cost": 3,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Anima",
+        "Vanguard",
+        "Shepherd"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Kai'Sa",
+      "cost": 3,
+      "role": "Attack Caster",
+      "range": 4,
+      "traits": [
+        "Dark Star",
+        "Rogue"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Lulu",
+      "cost": 3,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Stargazer",
+        "Replicator"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Maokai",
+      "cost": 3,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "N.O.V.A.",
+        "Brawler"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Miss Fortune",
+      "cost": 3,
+      "role": "Attack Caster",
+      "range": 4,
+      "traits": [
+        "Gun Goddess"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Ornn",
+      "cost": 3,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Space Groove",
+        "Bastion"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Rhaast",
+      "cost": 3,
+      "role": "Attack Tank",
+      "range": 1,
+      "traits": [
+        "Redeemer"
+      ],
+      "tags": ["frontline", "secondary_tank"]
+    },
+    {
+      "apiName": "Samira",
+      "cost": 3,
+      "role": "Attack Caster",
+      "range": 4,
+      "traits": [
+        "Space Groove",
+        "Sniper"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Urgot",
+      "cost": 3,
+      "role": "Attack Fighter",
+      "range": 2,
+      "traits": [
+        "Mecha",
+        "Brawler",
+        "Marauder"
+      ],
+      "tags": ["frontline", "secondary_carry"]
+    },
+    {
+      "apiName": "Viktor",
+      "cost": 3,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Psionic",
+        "Channeler"
+      ],
+      "tags": ["backline", "secondary_carry"]
+    },
+    {
+      "apiName": "Aurelion'Sol",
+      "cost": 4,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Mecha",
+        "Channeler"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Corki",
+      "cost": 4,
+      "role": "Attack Caster",
+      "range": 4,
+      "traits": [
+        "Meeple",
+        "Fateweaver"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "The Mighty Mech",
+      "cost": 4,
+      "role": "Attack Tank",
+      "range": 1,
+      "traits": [
+        "Mecha",
+        "Voyager"
+      ],
+      "tags": ["frontline", "tank"]
+    },
+    {
+      "apiName": "Karma",
+      "cost": 4,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Dark Star",
+        "Voyager"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Kindred",
+      "cost": 4,
+      "role": "Attack Marksman",
+      "range": 4,
+      "traits": [
+        "N.O.V.A.",
+        "Challenger"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "LeBlanc",
+      "cost": 4,
+      "role": "Magic Marksman",
+      "range": 4,
+      "traits": [
+        "Arbiter",
+        "Shepherd"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Master Yi",
+      "cost": 4,
+      "role": "Attack Fighter",
+      "range": 1,
+      "traits": [
+        "Psionic",
+        "Marauder"
+      ],
+      "tags": ["frontline", "carry"]
+    },
+    {
+      "apiName": "Nami",
+      "cost": 4,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Space Groove",
+        "Replicator"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Nunu",
+      "cost": 4,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Stargazer",
+        "Vanguard"
+      ],
+      "tags": ["frontline", "tank"]
+    },
+    {
+      "apiName": "Rammus",
+      "cost": 4,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Meeple",
+        "Bastion"
+      ],
+      "tags": ["frontline", "tank"]
+    },
+    {
+      "apiName": "Riven",
+      "cost": 4,
+      "role": "Hybrid Fighter",
+      "range": 1,
+      "traits": [
+        "Timebreaker",
+        "Rogue"
+      ],
+      "tags": ["frontline", "carry"]
+    },
+    {
+      "apiName": "Tahm Kench",
+      "cost": 4,
+      "role": "Magic Tank",
+      "range": 1,
+      "traits": [
+        "Oracle",
+        "Brawler"
+      ],
+      "tags": ["frontline", "tank"]
+    },
+    {
+      "apiName": "Xayah",
+      "cost": 4,
+      "role": "Attack Marksman",
+      "range": 4,
+      "traits": [
+        "Stargazer",
+        "Sniper"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Bard",
+      "cost": 5,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Meeple",
+        "Channeler"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Blitzcrank",
+      "cost": 5,
+      "role": "Magic Fighter",
+      "range": 1,
+      "traits": [
+        "Party Animal",
+        "Space Groove",
+        "Vanguard"
+      ],
+      "tags": ["frontline", "carry"]
+    },
+    {
+      "apiName": "Fiora",
+      "cost": 5,
+      "role": "Attack Fighter",
+      "range": 1,
+      "traits": [
+        "Divine Duelist",
+        "Anima",
+        "Marauder"
+      ],
+      "tags": ["frontline", "carry"]
+    },
+    {
+      "apiName": "Graves",
+      "cost": 5,
+      "role": "Attack Marksman",
+      "range": 4,
+      "traits": [
+        "Factory New"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Jhin",
+      "cost": 5,
+      "role": "Attack Marksman",
+      "range": 4,
+      "traits": [
+        "Dark Star",
+        "Eradicator",
+        "Sniper"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Morgana",
+      "cost": 5,
+      "role": "Magic Fighter",
+      "range": 2,
+      "traits": [
+        "Dark Lady"
+      ],
+      "tags": ["frontline", "carry"]
+    },
+    {
+      "apiName": "Shen",
+      "cost": 5,
+      "role": "Magic Fighter",
+      "range": 1,
+      "traits": [
+        "Bulwark",
+        "Bastion"
+      ],
+      "tags": ["frontline", "carry"]
+    },
+    {
+      "apiName": "Sona",
+      "cost": 5,
+      "role": "Magic Caster",
+      "range": 4,
+      "traits": [
+        "Commander",
+        "Psionic",
+        "Shepherd"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Vex",
+      "cost": 5,
+      "role": "Magic Marksman",
+      "range": 4,
+      "traits": [
+        "Doomer"
+      ],
+      "tags": ["backline", "carry"]
+    },
+    {
+      "apiName": "Zed",
+      "cost": 5,
+      "role": "Attack Fighter",
+      "range": 1,
+      "traits": [
+        "Galaxy Hunter"
+      ],
+      "tags": ["frontline", "carry"]
+    }
+  ]
+}
