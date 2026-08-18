@@ -53,6 +53,21 @@ pip install -r requirements.txt
 
 ### <a name="update-data"></a> 4. Update data (optional, in case of patch)
 
+Set 18 PBE data is generated from CommunityDragon instead of being maintained by hand. The updater combines the TFT aggregate, the localized champion manifest, and the individual character records, then validates the result before writing
+it:
+
+```bash
+python scripts/update_set18_data.py --channel pbe
+```
+
+The snapshot includes units, trait thresholds, emblems, and the special rules
+needed for Lux, Elder Dragon, and Eclipse. Run its integrity tests with:
+
+```bash
+python -m unittest -v tests.test_set18_data
+```
+
+PBE data can change frequently. Regenerate and review the snapshot after every PBE patch before comparing algorithm results.
 
 ### <a name="change-parameters"></a> 5. Change algorithm parameters (optional)
 

@@ -3,11 +3,13 @@ Genetic Algorithm to generate viable TeamFight Tactics compositions.
 """
 import random
 import json
+from pathlib import Path
+
 import numpy as np
 from tqdm import tqdm
 
 # Reference files
-DATA_FILE = "TFTSet17_full_lookup.json"
+DATA_FILE = Path(__file__).parent / "data" / "TFTSet18_full_lookup.json"
 
 # Algorithm parameters
 POPULATION_SIZE = 200
@@ -17,7 +19,6 @@ MUTATION_RATE = 0.05
 GENERATIONS = 1000
 
 NUM_ONES = 9  # Number of 1s for each individual (binary representation)
-CHROMOSOME_LENGTH = 63
 
 ELITE_SIZE = int(POPULATION_SIZE * ELITE_FRACTION)
 
@@ -31,62 +32,36 @@ def load_data(file):
     return data
 
 def process_traits(traits_data):
-    """Processes traits data and groups multiple versions of the same trait"""
-    grouped_traits = {}
+    """Extract the normalized Set 18 traits used by the optimizer."""
+    processed_traits = []
+    seen_api_names = set()
 
     for trait in traits_data:
         api_name = trait["apiName"]
-        units = [x["unit"] for x in trait["units"]]
+        if api_name in seen_api_names:
+            raise ValueError(f"Duplicate trait '{api_name}'")
+        seen_api_names.add(api_name)
 
-        if api_name not in grouped_traits:
-            grouped_traits[api_name] = {
-                "apiName": api_name,
-                "units": units,
-                "variants": []
-            }
-        else:
-            # Safety net: if the units are different we merge without duplicates
-            grouped_traits[api_name]["units"] = list(
-                set(grouped_traits[api_name]["units"] + units)
-            )
-
-        # Case 1: trait without variants
-        if "effects" in trait:
-            grouped_traits[api_name]["variants"].append({
-                "effects": trait["effects"]
+        thresholds = trait.get("thresholds")
+        if thresholds is None:
+            # Compatibility fallback for a non-normalized CommunityDragon trait.
+            thresholds = sorted({
+                effect["minUnits"]
+                for effect in trait.get("effects", [])
+                if isinstance(effect.get("minUnits"), int)
+                and effect["minUnits"] > 0
             })
+        if any(not isinstance(threshold, int) or threshold <= 0 for threshold in thresholds):
+            raise ValueError(f"Invalid thresholds for trait '{api_name}': {thresholds}")
 
-        # Case 2: trait with variants
-        elif "variants" in trait:
-            for variant in trait["variants"]:
-                grouped_traits[api_name]["variants"].append({
-                    "effects": variant["effects"]
-                })
-
-        else:
-            raise ValueError(f"Trait '{api_name}' has neither 'effects' nor 'variants'")
-
-        processed_traits = []
-
-        for trait in grouped_traits.values():
-            # Standard case: one version
-            if len(trait["variants"]) == 1:
-                effects = trait["variants"][0]["effects"]
-                thresholds = [x["minUnits"] for x in effects]
-
-                processed_traits.append({
-                    "apiName": trait["apiName"],
-                    "units": trait["units"],
-                    "thresholds": thresholds,
-                    "effects": effects
-                })
-            else:
-                # Case with variants
-                processed_traits.append({
-                    "apiName": trait["apiName"],
-                    "units": trait["units"],
-                    "variants": trait["variants"]
-                })
+        processed_traits.append({
+            "apiName": api_name,
+            "name": trait.get("name", api_name),
+            "units": [contribution["unit"] for contribution in trait["units"]],
+            "thresholds": thresholds,
+            "effects": trait.get("effects", []),
+            "activation": trait.get("activation")
+        })
 
     return processed_traits
 
@@ -131,28 +106,9 @@ def compute_fitness(individual, traits_matrix, traits):
     for i, count in enumerate(active_traits):
         trait = traits[i]
 
-        # Normal case: trait without variants
-        if "thresholds" in trait:
-            for threshold in trait["thresholds"]:
-                if count >= threshold:
-                    fitness_value += threshold
-
-        # Case with variants: we only take the one that gives the best score
-        elif "variants" in trait:
-            best_variant_score = 0
-
-            for variant in trait["variants"]:
-                variant_score = 0
-                thresholds = [effect["minUnits"] for effect in variant["effects"]]
-
-                for threshold in thresholds:
-                    if count >= threshold:
-                        variant_score += threshold
-
-                if variant_score > best_variant_score:
-                    best_variant_score = variant_score
-
-            fitness_value += best_variant_score
+        for threshold in trait["thresholds"]:
+            if count >= threshold:
+                fitness_value += threshold
 
     return fitness_value
 
@@ -252,10 +208,10 @@ def display_solution(individual, units, fitness):
     display_units = [units[i] for i in range(len(individual)) if individual[i] == 1]
     return f"score = {fitness}, units : {display_units}"
 
-def generate_compositions(traits, traits_matrix):
+def generate_compositions(traits, traits_matrix, chromosome_length):
     """Main function which runs the genetic algorithm"""
     # Creating the initial population
-    population = create_population(POPULATION_SIZE, CHROMOSOME_LENGTH)
+    population = create_population(POPULATION_SIZE, chromosome_length)
 
     with tqdm(total=GENERATIONS, desc="Generations") as pbar:
         for generation in range(GENERATIONS):
@@ -324,7 +280,11 @@ def main():
     traits = process_traits(data["traits"])
     traits_matrix = create_traits_matrix(traits, units)
     # Running the algorithm
-    population, fitness_values = generate_compositions(traits, traits_matrix)
+    population, fitness_values = generate_compositions(
+        traits,
+        traits_matrix,
+        len(units)
+    )
     # Exporting the N best solutions
     export_top_solutions(population, fitness_values, units)
 
